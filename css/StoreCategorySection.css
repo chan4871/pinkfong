@@ -1,0 +1,254 @@
+@charset "UTF-8";
+.store-category-section-wrapper {
+  padding: 60px 0;
+}
+.store-category-section-wrapper .store-category-section-inner {
+  max-width: 1280px;
+  margin: auto;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 14px;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 가로 4열 */
+  gap: 20px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0%;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card {
+  border: 1px solid #eee;
+  width: 100%;
+  text-align: left;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  border-radius: 10px;
+  height: 400px;
+  overflow: hidden;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  /* 정사각형 이미지 영역 */
+  overflow: hidden;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-img img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-img .discount-rate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffd200;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 0 0 10px 0;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text {
+  padding: 0.5rem;
+  text-align: center;
+  height: 100px;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text .product-name {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text .original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  margin-right: 5px;
+}
+.store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text .discount-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffd200;
+}
+.store-category-section-wrapper .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+.store-category-section-wrapper .pagination button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+.store-category-section-wrapper .pagination button:hover {
+  background-color: #e0e0e0;
+}
+.store-category-section-wrapper .pagination button.active {
+  background-color: #ffd200;
+  color: white;
+  border-color: #ffd200;
+}
+
+@media (max-width: 500px) {
+  .store-category-section-wrapper {
+    padding: 40px 0;
+  }
+  .store-category-section-wrapper .store-category-section-inner {
+    width: 90%;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-toolbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid a {
+    max-width: 215px;
+    width: 100%;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card {
+    border: 1px solid #eee;
+    text-align: left;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    border-radius: 10px;
+    max-height: 400px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    overflow: hidden;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card:hover {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    /* 정사각형 이미지 영역 */
+    overflow: hidden;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-img img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 4px;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-img .discount-rate {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd200;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 0 0 10px 0;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text {
+    padding: 0.5rem;
+    text-align: center;
+    height: 100px;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text .product-name {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text .original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9em;
+    margin-right: 5px;
+  }
+  .store-category-section-wrapper .store-category-section-inner .product-list-grid .product-card .product-card-text .discount-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffd200;
+  }
+  .store-category-section-wrapper .pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  .store-category-section-wrapper .pagination button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .store-category-section-wrapper .pagination button:hover {
+    background-color: #e0e0e0;
+  }
+  .store-category-section-wrapper .pagination button.active {
+    background-color: #ffd200;
+    /* 핑크색 */
+    color: white;
+    border-color: #ffd200;
+  }
+}

@@ -1,0 +1,75 @@
+.NotFound-section {
+    width: 100%;
+    height: 200vh;
+    background-color: #87d6ff;
+
+}
+
+.NotFound-text {
+    max-width: 1280px;
+    height: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;
+    z-index: 100;
+
+    h1 {
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    a {
+        background-color: #FF4DAB;
+        border-color: #FF4DAB;
+        margin-bottom: 60px;
+        border-radius: .2rem;
+        cursor: pointer;
+        z-index: 100;
+
+        button {
+            cursor: pointer;
+            color: #fff;
+            padding: 1.125rem 2.25rem;
+            font-size: 0.875rem;
+            line-height: 1.3333333;
+
+            box-shadow: 0 2px 2px 0 rgba(255, 77, 171, 0.14), 0 3px 1px -2px rgba(255, 77, 171, 0.2), 0 1px 5px 0 rgba(255, 77, 171, 0.12);
+            transition: .2s;
+
+            &:hover {
+                box-shadow: 0 14px 26px -12px rgba(255, 77, 171, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 77, 171, 0.2);
+            }
+
+        }
+
+
+    }
+
+    img {
+        width: 50%;
+
+    }
+}
+
+.NotFound-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 200vh;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,46 @@
+*{
+  margin: 0; padding: 0;
+box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 링크 색상 부모 요소 상속 */
+}
+img {
+  max-width: 100%; /* 이미지가 부모 요소를 넘지 않도록 */
+  height: auto;
+  display: block; /* 이미지 하단 여백 제거 */
+}
+ul, ol {
+  list-style: none; /* 리스트 점/숫자 제거 */
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit; /* 버튼 폰트 상속 */
+}
+
+
+/* 기본 폰트 설정 (나중에 웹 폰트 연결 시 변경) */
+body {
+  font-family: 'Noto Sans KR', 'Noto Sans', sans-serif; /* 임시 폰트, 나중에 Noto Sans KR 등으로 변경 */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 기타 전역 스타일 */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 최소 높이를 뷰포트 전체 높이로 설정 */
+}
+
+.App {
+  flex: 1; /* App 컴포넌트가 남은 공간을 차지하도록 */
+}

@@ -1,0 +1,290 @@
+.StoreCategoryBody {
+
+
+
+    .StoreCategoryList {
+        margin: auto;
+        width: 100%;
+        border-bottom: 1px solid #bcbcbc;
+
+
+        ul {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            li {
+                a {
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    transition: background-color .2s, color .2s;
+                    color: #222;
+
+                    &.active {
+                        background-color: #ffd200;
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        background-color: #ffd200;
+                        color: #fff;
+                    }
+
+                    &.active:hover {
+                        background-color: #ffd200;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .inner {
+        max-width: 1280px;
+        margin: auto;
+        padding: 0;
+
+        .StoreCategoryContent {
+            width: 100%;
+
+            .notice {
+                h1 {
+                    margin: 20px 0;
+                }
+
+                ul {
+                    border: 1px solid #bcbcbc;
+                    border-radius: 10px;
+
+                    li {
+                        padding: 20px;
+                        border-bottom: 1px solid #bcbcbc;
+
+
+                        &:nth-last-child(1) {
+                            border: none;
+                        }
+
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+                            color: #bcbcbc;
+                            transition: .2s;
+
+                            &:hover {
+                                color: #404040;
+                            }
+
+                            p {
+                                display: flex;
+                                gap: 6px;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+
+                .notice-btn {
+                    width: 100%;
+                    height: 68px;
+                    background-color: #9777ee;
+                    margin: 20px 0;
+                    color: #fff;
+                    text-align: center;
+                    position: relative;
+                    border-radius: 10px;
+
+                    a {
+
+                        img {
+                            position: absolute;
+                            right: 30%;
+                            bottom: 0;
+                            height: 130%;
+
+                        }
+                    }
+                }
+            }
+
+            .qna {
+                h1 {
+                    margin: 20px 0;
+                }
+
+                ul {
+                    border: 1px solid #bcbcbc;
+                    border-radius: 10px;
+
+                    li {
+                        padding: 20px;
+                        border-bottom: 1px solid #bcbcbc;
+                        color: #bcbcbc;
+                        transition: .2s;
+
+                        &:nth-last-child(1) {
+                            border: none;
+                        }
+
+                        &:hover {
+                            color: #404040;
+                        }
+                    }
+                }
+
+                .qna-btn {
+                    width: 100%;
+                    height: 68px;
+                    background-color: #00bbd3;
+                    margin: 20px 0;
+                    color: #fff;
+                    text-align: center;
+                    position: relative;
+                    border-radius: 10px;
+
+                    a {
+                        img {
+                            position: absolute;
+                            right: 27%;
+                            bottom: 0;
+                            height: 130%;
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 500px) {
+    .StoreCategoryBody {
+
+
+        .StoreCategoryList {
+            margin: auto;
+            width: 100%;
+            border-bottom: 1px solid #bcbcbc;
+
+            ul {
+                display: flex;
+                gap: 5px;
+                padding: 5px;
+                justify-content: center;
+
+                li {
+                    a {
+                        padding: 10px 12px;
+                        border-radius: 20px;
+                        transition: .2s;
+
+
+
+                        &:hover {
+                            background-color: #ffd200;
+                        }
+                    }
+                }
+            }
+        }
+
+        .inner {
+            width: 90%;
+
+            .StoreCategoryContent {
+                width: 100%;
+
+                .notice {
+                    h1 {
+                        text-align: center;
+                        margin: 20px 0;
+                    }
+
+                    ul {
+                        border: 1px solid #bcbcbc;
+                        border-radius: 10px;
+
+                        li {
+                            padding: 10px;
+                            border-bottom: 1px solid #bcbcbc;
+
+
+
+                            &:nth-last-child(1) {
+                                border: none;
+                            }
+
+                            a {
+                                display: flex;
+                                justify-content: space-between;
+                                color: #bcbcbc;
+                                transition: .2s;
+                                font-size: .8rem;
+
+                                &:hover {
+                                    color: #404040;
+                                }
+
+                                p {
+                                    display: flex;
+                                    gap: 2px;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+
+                    .notice-btn {
+                        height: 48px;
+
+                        a {
+
+                            img {
+                                position: absolute;
+                                right: 10%;
+
+                            }
+                        }
+                    }
+                }
+
+                .qna {
+                    h1 {
+                        text-align: center;
+                    }
+
+                    ul {
+                        li {
+                            font-size: .8rem;
+
+                            &:nth-last-child(1) {
+                                border: none;
+                            }
+
+                            &:hover {
+                                color: #404040;
+                            }
+                        }
+                    }
+
+                    .qna-btn {
+                        height: 48px;
+
+
+                        a {
+                            img {
+                                right: 10%;
+
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

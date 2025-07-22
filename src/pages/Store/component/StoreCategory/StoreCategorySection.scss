@@ -1,0 +1,269 @@
+.store-category-section-wrapper {
+  padding: 60px 0;
+
+
+  .store-category-section-inner {
+    max-width: 1280px;
+    margin: auto;
+
+    .product-list-toolbar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 14px;
+
+    }
+    .product-list-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 가로 4열 */
+      gap: 20px;
+      height: max-content;
+      padding: 0%;
+
+
+      .product-card {
+        border: 1px solid #eee;
+        width: 100%;
+        text-align: left;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+        border-radius: 10px;
+        height: 400px;
+        overflow: hidden;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .product-card-img {
+          position: relative;
+          width: 100%;
+          padding-bottom: 100%;
+          /* 정사각형 이미지 영역 */
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+
+          .discount-rate {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #ffd200;
+
+            color: white;
+            padding: 3px 8px;
+            border-radius: 0 0 10px 0;
+            font-size: 0.8em;
+            font-weight: bold;
+          }
+        }
+
+        .product-card-text {
+          padding: .5rem;
+          text-align: center;
+          height: 100px;
+
+          .product-name {
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            padding: 0;
+          }
+
+          .original-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 0.9em;
+            margin-right: 5px;
+          }
+
+          .discount-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffd200;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+
+    button {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+
+      &.active {
+        background-color: #ffd200;
+        color: white;
+        border-color: #ffd200;
+      }
+    }
+  }
+}
+
+@media (max-width : 500px) {
+
+  .store-category-section-wrapper {
+    padding: 40px 0;
+
+    .store-category-section-inner {
+      width: 90%;
+
+      .product-list-toolbar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+      }
+
+      .product-list-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        height: max-content;
+
+        a {
+          max-width: 215px;
+          width: 100%;
+        }
+
+        .product-card {
+          border: 1px solid #eee;
+
+          text-align: left;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s;
+          border-radius: 10px;
+          max-height: 400px;
+          height: max-content;
+          overflow: hidden;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+
+          .product-card-img {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            /* 정사각형 이미지 영역 */
+            overflow: hidden;
+
+            img {
+              position: absolute;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+              border-radius: 4px;
+            }
+
+            .discount-rate {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: #ffd200;
+
+              color: white;
+              padding: 3px 8px;
+              border-radius: 0 0 10px 0;
+              font-size: 0.8em;
+              font-weight: bold;
+            }
+          }
+
+          .product-card-text {
+            padding: .5rem;
+            text-align: center;
+            height: 100px;
+
+            .product-name {
+              font-size: 1rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              margin: 0;
+              padding: 0;
+            }
+
+            .original-price {
+              color: #999;
+              text-decoration: line-through;
+              font-size: 0.9em;
+              margin-right: 5px;
+            }
+
+            .discount-price {
+              font-size: 1.2em;
+              font-weight: bold;
+              color: #ffd200;
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 10px;
+
+      button {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+
+        &.active {
+          background-color: #ffd200;
+          /* 핑크색 */
+          color: white;
+          border-color: #ffd200;
+        }
+      }
+    }
+  }
+}

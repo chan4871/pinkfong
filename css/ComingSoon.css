@@ -1,0 +1,117 @@
+.ComingSoon {
+  height: 90vh;
+  width: 100%;
+}
+.ComingSoon img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ComingSoon .Comingsoon-text {
+  position: absolute;
+  max-width: 1280px;
+  top: 36%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: auto;
+  padding: 120px 0;
+  z-index: 100;
+  text-align: center;
+}
+.ComingSoon .Comingsoon-text h2 {
+  font-size: 2.4rem;
+}
+.ComingSoon .Comingsoon-text p {
+  font-size: 1.8rem;
+}
+.ComingSoon .Comingsoon-text button {
+  padding: 10px 32px;
+  margin: 40px 10px 40px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+.ComingSoon .Comingsoon-text button.link-home {
+  border: 2px solid #FF53A1;
+  color: #FF53A1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.ComingSoon .Comingsoon-text button.link-home:hover {
+  background-color: #FF53A1;
+  color: #fff;
+}
+.ComingSoon .Comingsoon-text button.link-store {
+  border: 2px solid #ffd200;
+  color: #ffd200;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.ComingSoon .Comingsoon-text button.link-store:hover {
+  background-color: #ffd200;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .ComingSoon {
+    height: 90vh;
+    width: 100%;
+  }
+  .ComingSoon img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .ComingSoon .Comingsoon-text {
+    position: absolute;
+    width: 90%;
+    top: 38%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 120px 0;
+    z-index: 100;
+    text-align: center;
+  }
+  .ComingSoon .Comingsoon-text h2 {
+    font-size: 1.2rem;
+  }
+  .ComingSoon .Comingsoon-text p {
+    font-size: 1.4rem;
+  }
+  .ComingSoon .Comingsoon-text button {
+    padding: 5px 16px;
+    margin: 20px 10px 20px 10px;
+    border-radius: 20px;
+    font-size: 0.6rem;
+  }
+  .ComingSoon .Comingsoon-text button.link-home {
+    border: 2px solid #FF53A1;
+    color: #FF53A1;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .ComingSoon .Comingsoon-text button.link-home:hover {
+    background-color: #FF53A1;
+    color: #fff;
+  }
+  .ComingSoon .Comingsoon-text button.link-store {
+    border: 2px solid #ffd200;
+    color: #ffd200;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .ComingSoon .Comingsoon-text button.link-store:hover {
+    background-color: #ffd200;
+    color: #fff;
+  }
+}

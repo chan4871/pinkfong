@@ -1,0 +1,171 @@
+.TimeSaleSwiper {
+    scroll-snap-type: none;
+    padding: 10px 0;
+}
+
+.time-sale-list {
+    margin: 80px 0;
+
+    .inner {
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        align-items: center;
+
+        .time-sale-title {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #222;
+            margin: 0;
+
+        }
+
+        .countdown {
+            display: flex;
+            /* Flexbox를 사용하여 숫자들을 가로로 정렬합니다. */
+            justify-content: center;
+            align-items: center;
+
+            width: max-content;
+            padding: 4px 20px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            color: #333;
+            /* 글자색은 유지 */
+
+            .countdown-digit {
+                display: inline-block;
+                padding: 2px 6px;
+                border-radius: 4px;
+                min-width: 28px;
+                text-align: center;
+                font-weight: bold;
+                color: #fff;
+                margin: 0 2px;
+            }
+
+            .hours-first-digit {
+                background-color: #02A8F3;
+                /* 시의 첫 번째 숫자 배경색 */
+            }
+
+            .hours-second-digit {
+                background-color: #02A8F3;
+                /* 시의 두 번째 숫자 배경색 */
+            }
+
+            .minutes-first-digit {
+                background-color: #02A8F3;
+                /* 분의 첫 번째 숫자 배경색 */
+            }
+
+            .minutes-second-digit {
+                background-color: #02A8F3;
+                /* 분의 두 번째 숫자 배경색 */
+            }
+
+            .seconds-first-digit {
+                background-color: #02A8F3;
+                /* 초의 첫 번째 숫자 배경색 */
+            }
+
+            .seconds-second-digit {
+                background-color: #02A8F3;
+                /* 초의 두 번째 숫자 배경색 */
+            }
+
+            .countdown-colon {
+                display: inline-block;
+                margin: 0 4px;
+                /* 콜론 좌우 여백 */
+                color: #555;
+                /* 콜론 색상 */
+                font-weight: bold;
+            }
+        }
+    }
+
+    .time-sale-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: .2s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .info {
+            margin-top: 0.2rem;
+            padding: .2rem;
+            text-align: center;
+
+            .name {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #444;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .price {
+                margin-top: 0.3rem;
+                font-size: 1rem;
+                color: #ffd200;
+                font-weight: bold;
+
+                del {
+                    color: #aaa;
+                    margin-right: 0.4rem;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+            }
+
+            .buy-button {
+                margin-top: 0.5rem;
+                background-color: #ff3d89;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 0.9rem;
+
+                &:hover {
+                    background-color: #ff1672;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 500px) {
+
+    .time-sale-list {
+
+        .inner {
+            width: 90%;
+
+            .time-sale-title {
+                font-size: 1.6rem;
+            }
+
+
+        }
+
+
+    }
+}

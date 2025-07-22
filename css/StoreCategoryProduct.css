@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.store-product-list-container {
+  padding: 20px;
+}
+.store-product-list-container .product-list-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.store-product-list-container .product-list-controls .total-products-count {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.store-product-list-container .product-list-controls .sort-options select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.store-product-list-container .product-list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 가로 4열 */
+  gap: 20px; /* 제품 간 간격 */
+  min-height: 400px; /* 최소 높이 설정 (상품이 없을 경우 대비) */
+}
+.store-product-list-container .product-list-grid .product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.store-product-list-container .product-list-grid .product-card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.store-product-list-container .product-list-grid .product-card .product-card-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 정사각형 이미지 영역 */
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.store-product-list-container .product-list-grid .product-card .product-card-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.store-product-list-container .product-list-grid .product-card .product-card-img .discount-rate {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #ffd200; /* 핑크색 */
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.store-product-list-container .product-list-grid .product-card .product-name {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  height: 2.8em; /* 텍스트 2줄 정도를 위한 높이 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2줄까지만 표시 */
+  -webkit-box-orient: vertical;
+}
+.store-product-list-container .product-list-grid .product-card .original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  margin-right: 5px;
+}
+.store-product-list-container .product-list-grid .product-card .discount-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffd200; /* 핑크색 */
+}
+.store-product-list-container .no-products-message {
+  grid-column: 1/-1; /* 그리드 전체 폭 차지 */
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: #666;
+}
+.store-product-list-container .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+.store-product-list-container .pagination button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 50%; /* 동그란 버튼 */
+  width: 40px;
+  height: 40px;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+.store-product-list-container .pagination button:hover {
+  background-color: #e0e0e0;
+}
+.store-product-list-container .pagination button.active {
+  background-color: #ffd200; /* 핑크색 */
+  color: white;
+  border-color: #ffd200;
+}

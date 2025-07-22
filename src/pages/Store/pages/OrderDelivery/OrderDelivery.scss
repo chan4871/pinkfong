@@ -1,0 +1,68 @@
+.StoreCategoryBody {
+    width: 100%;
+    padding: 40px 0;
+
+    .inner {
+        max-width: 1280px;
+        margin: auto;
+        padding: 20px 180px;
+
+
+        .member {
+            padding: 20px;
+
+            h5 {
+                font-size: 1.2rem;
+                color: #8095a7;
+                font-weight: 400;
+            }
+
+            button {
+                margin-top: 14px;
+                width: 100%;
+                height: 3rem;
+                background-color: #ffd200;
+                border-radius: 10px;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+
+        .non-member {
+            padding: 20px;
+
+            h5 {
+                font-size: 1.2rem;
+                color: #8095a7;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+
+            input {
+                display: block;
+                flex-direction: column;
+                margin: 20px 0;
+                width: 100%;
+                height: 3rem;
+                border: none;
+                padding: 10px;
+                border-bottom: 1px solid #9e9e9e;
+                color: #8095a7;
+            }
+
+            button {
+                margin-top: 4px;
+                width: 100%;
+                height: 3rem;
+                background-color: #ffd200;
+                border-radius: 10px;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

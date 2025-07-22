@@ -1,0 +1,137 @@
+.join-page {
+  background-color: #fff;
+  padding-top: 80px;
+  margin: 20px 0;
+}
+.join-page .join-page-container {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 32px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+.join-page .join-page-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.join-page .join-page-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.join-page .join-page-container form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 16px;
+}
+.join-page .join-page-container form label:checked {
+  background-color: #ffd200;
+}
+.join-page .join-page-container form label input,
+.join-page .join-page-container form label select {
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.join-page .join-page-container form label input:focus,
+.join-page .join-page-container form label select:focus {
+  outline: 1px solid #ffd200;
+  -webkit-box-shadow: 0 0 5px #ffd200;
+          box-shadow: 0 0 5px #ffd200;
+}
+.join-page .join-page-container form .phone-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.join-page .join-page-container form .phone-input select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.join-page .join-page-container form .phone-input input {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+.join-page .join-page-container form .phone-input button {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.join-page .join-page-container form .checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.join-page .join-page-container form .checkboxes label {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.join-page .join-page-container form .submit-btn {
+  height: 40px;
+  margin-top: 24px;
+  padding: 6px;
+  background-color: #ffd200;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.join-page .join-page-container .info-table {
+  margin: 24px 0;
+  font-size: 14px;
+}
+.join-page .join-page-container .info-table .info-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.join-page .join-page-container .info-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+.join-page .join-page-container .info-table table th,
+.join-page .join-page-container .info-table table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+.join-page .join-page-container .info-table table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  width: 100px;
+}
+.join-page .join-page-container .info-table .info-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+}

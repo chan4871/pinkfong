@@ -1,0 +1,229 @@
+.StoreCategoryBody .StoreCategoryList {
+  margin: auto;
+  width: 100%;
+  border-bottom: 1px solid #bcbcbc;
+}
+.StoreCategoryBody .StoreCategoryList ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+.StoreCategoryBody .StoreCategoryList ul li a {
+  padding: 10px 20px;
+  border-radius: 20px;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  color: #222;
+}
+.StoreCategoryBody .StoreCategoryList ul li a.active {
+  background-color: #ffd200;
+  color: #fff;
+}
+.StoreCategoryBody .StoreCategoryList ul li a:hover {
+  background-color: #ffd200;
+  color: #fff;
+}
+.StoreCategoryBody .StoreCategoryList ul li a.active:hover {
+  background-color: #ffd200;
+  color: #fff;
+}
+.StoreCategoryBody .inner {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0;
+}
+.StoreCategoryBody .inner .StoreCategoryContent {
+  width: 100%;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice h1 {
+  margin: 20px 0;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice ul {
+  border: 1px solid #bcbcbc;
+  border-radius: 10px;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice ul li {
+  padding: 20px;
+  border-bottom: 1px solid #bcbcbc;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice ul li:nth-last-child(1) {
+  border: none;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #bcbcbc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice ul li a:hover {
+  color: #404040;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice ul li a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice .notice-btn {
+  width: 100%;
+  height: 68px;
+  background-color: #9777ee;
+  margin: 20px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .notice .notice-btn a img {
+  position: absolute;
+  right: 30%;
+  bottom: 0;
+  height: 130%;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna h1 {
+  margin: 20px 0;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna ul {
+  border: 1px solid #bcbcbc;
+  border-radius: 10px;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna ul li {
+  padding: 20px;
+  border-bottom: 1px solid #bcbcbc;
+  color: #bcbcbc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna ul li:nth-last-child(1) {
+  border: none;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna ul li:hover {
+  color: #404040;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna .qna-btn {
+  width: 100%;
+  height: 68px;
+  background-color: #00bbd3;
+  margin: 20px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+.StoreCategoryBody .inner .StoreCategoryContent .qna .qna-btn a img {
+  position: absolute;
+  right: 27%;
+  bottom: 0;
+  height: 130%;
+}
+
+@media (max-width: 500px) {
+  .StoreCategoryBody .StoreCategoryList {
+    margin: auto;
+    width: 100%;
+    border-bottom: 1px solid #bcbcbc;
+  }
+  .StoreCategoryBody .StoreCategoryList ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .StoreCategoryBody .StoreCategoryList ul li a {
+    padding: 10px 12px;
+    border-radius: 20px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .StoreCategoryBody .StoreCategoryList ul li a:hover {
+    background-color: #ffd200;
+  }
+  .StoreCategoryBody .inner {
+    width: 90%;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent {
+    width: 100%;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice ul {
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice ul li {
+    padding: 10px;
+    border-bottom: 1px solid #bcbcbc;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice ul li:nth-last-child(1) {
+    border: none;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #bcbcbc;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    font-size: 0.8rem;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice ul li a:hover {
+    color: #404040;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice ul li a p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice .notice-btn {
+    height: 48px;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .notice .notice-btn a img {
+    position: absolute;
+    right: 10%;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .qna h1 {
+    text-align: center;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .qna ul li {
+    font-size: 0.8rem;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .qna ul li:nth-last-child(1) {
+    border: none;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .qna ul li:hover {
+    color: #404040;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .qna .qna-btn {
+    height: 48px;
+  }
+  .StoreCategoryBody .inner .StoreCategoryContent .qna .qna-btn a img {
+    right: 10%;
+  }
+}

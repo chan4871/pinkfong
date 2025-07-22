@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+header.store-header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+
+
+    .store-header-inner {
+        max-width: 1280px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+
+            .logo {
+
+                font-size: 26px;
+                font-family: 'KCC-Ganpan' !important;
+
+            }
+
+            nav {
+
+
+                ul {
+                    display: flex;
+                    gap: 26px;
+
+                    li {
+                        a {
+                            font-size: 15px;
+                            padding: 5px 0px;
+                            color: #222;
+                            transition: .2s;
+
+                            &:hover {
+                                color: #ffd200;
+                                font-weight: 600;
+                            }
+
+                            &.active {
+                                color: #ffd200;
+                                font-weight: 600;
+                                border-bottom: 2px solid #ffd200;
+                            }
+                        }
+
+
+
+
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+
+            nav {
+                width: 100%;
+
+                ul {
+                    display: flex;
+                    gap: 26px;
+
+                    li {
+
+
+                        a {
+                            font-size: 15px;
+                            color: #222;
+                            transition: .2s;
+                            padding: 5px 0px;
+
+                            &:hover {
+                                color: #ffd200;
+                                font-weight: 600;
+                            }
+
+                            &.active {
+                                color: #ffd200;
+                                font-weight: 600;
+                                border-bottom: 2px solid #ffd200;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav-icons {
+                display: flex;
+                gap: 26px;
+
+                a {
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    width: 24px;
+                    height: 24px;
+                    color: #222;
+                    transition: .2s;
+                    padding: 5px 0px;
+                    position: relative;
+
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        border: 1px solid #000;
+                        position: absolute;
+                        top: 2px;
+                        right: 0px;
+                        background-color: #000;
+                        border-radius: 50%;
+                        font-size: 8px;
+                        text-align: center;
+                        line-height: 12px;
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        border-radius: 20px;
+                        background-color: #ffd200;
+                    }
+
+                    &.active {
+                        border-radius: 20px;
+                        background-color: #ffd200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --- 모바일 헤더 및 메뉴 스타일 --- */
+
+// 500px 이하에서만 적용될 스타일
+@media (max-width : 500px) {
+
+    header.store-header {
+        .store-header-inner {
+            display: none;
+        }
+
+        .mob-header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            height: 100%;
+
+            .mob-menu-btn {
+                width: 80px;
+                display: flex;
+                align-items: center;
+                font-size: 1.8rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #222;
+                padding: 0;
+            }
+
+            .mob-logo {
+                a {
+                    font-size: 26px;
+                    font-family: 'KCC-Ganpan' !important;
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+
+            .mob-nav-icons {
+                width: 80px;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                justify-content: end;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    color: #222;
+                    text-decoration: none;
+                    position: relative;
+
+                    .cart-item-count {
+                        position: absolute;
+                        top: -5px;
+                        right: -8px;
+                        background-color: #000;
+                        color: #fff;
+                        font-weight: bold;
+                        border-radius: 50%;
+                        padding: 2px 6px;
+                        font-size: 10px;
+                        min-width: 16px;
+                        height: 18px;
+                        text-align: center;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+
+        // 모바일 슬라이드 메뉴 (처음에는 숨김)
+        .mob-slide-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50vw;
+
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out, visibility 0.3s ease-out; // 애니메이션 추가
+            visibility: hidden;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+
+            &.open {
+
+                transform: translateX(0);
+                visibility: visible;
+            }
+
+            .mob-menu-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 20px;
+
+
+                .mob-close-btn {
+                    background: none;
+                    border: none;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: #222;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .mob-utility-nav-top {
+                    display: flex;
+                    gap: 15px;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: #666;
+                            font-size: 14px;
+
+                            &:hover {
+                                color: #ffd200;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mob-store-category-nav {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    .nav-item {
+                        text-decoration: none;
+                        color: #333;
+                        font-size: 16px;
+                        font-weight: 500;
+                        display: block;
+                        padding: 8px 0;
+
+                        &:hover,
+                        &.active {
+                            color: #ffd200;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .mob-utility-nav-bottom {
+                list-style: none;
+                padding: 20px 0 0;
+                margin: 0;
+                border-top: 1px solid #eee;
+
+
+                li {
+                    margin-bottom: 10px;
+                    padding: 4px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+
+                        text-decoration: none;
+                        color: #666;
+                        font-size: 15px;
+
+                        &:hover {
+                            color: #ffd200;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 메뉴 바깥쪽 어둡게 처리하는 오버레이 
+        .mob-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-out, visibility 0.3s ease-out; // 애니메이션 추가
+
+            &.active {
+
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// 500px 초과 (데스크톱 화면) - 모바일 관련 요소 숨김
+@media (min-width: 501px) {
+
+    .mob-header-inner,
+    .mob-slide-menu,
+    .mob-menu-overlay {
+        display: none !important;
+    }
+
+    header.store-header .store-header-inner {
+        display: flex !important;
+    }
+}

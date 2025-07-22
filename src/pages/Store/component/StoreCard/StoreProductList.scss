@@ -1,0 +1,125 @@
+.product-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 가로 4열 */
+    gap: 20px;
+    height: max-content;
+    padding: 20px 0;
+
+
+    a {}
+
+    .product-card {
+
+        border: 1px solid #eee;
+        width: 100%;
+        text-align: left;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+        border-radius: 10px;
+        height: 400px;
+        overflow: hidden;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card-img {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            /* 정사각형 이미지 영역 */
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+
+            span {
+                display: inline-block;
+                width: 30%;
+                height: 40px;
+                background-color: #ffd200;
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 40px;
+                color: #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                border-radius: 0 0 10px 0;
+            }
+
+
+        }
+
+        .product-card-text {
+            padding: .5rem;
+            text-align: center;
+            height: 100px;
+
+
+            .product-name {
+                display: block;
+                max-width: 280px;
+                font-size: 1rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+                padding: 0;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .original-price {
+                color: #999;
+                text-decoration: line-through;
+                font-size: 0.8em;
+                margin-right: 5px;
+            }
+
+            .discount-price {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #ffd200;
+            }
+        }
+
+
+
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width : 500px) {
+    .product-container {}
+
+    .product-list-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 20px 0;
+        box-sizing: border-box;
+
+        a {
+            width: 48%;
+        }
+
+        .product-card {
+            max-height: 310px;
+
+
+
+        }
+    }
+}
