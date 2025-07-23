@@ -36,6 +36,7 @@ const MainLayout = ({ children }) => {
         {
           React.Children.map(children, child => {
              console.log('child.type.name:', child?.type?.name);
+            console.log('MainLayout passing scrollRef:', homeIntroRef);
             // child가 유효한 React 엘리먼트이고, 우리가 props를 추가하고 싶은 'Home' 컴포넌트인지 확인합니다.
             // 주의: `child.type.name`으로 컴포넌트 이름을 비교하는 것은
             // 빌드 시 코드가 난독화될 경우 동작하지 않을 수 있습니다.
