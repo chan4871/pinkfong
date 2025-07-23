@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import './App.css'; // 전역 CSS 또는 SCSS 파일
 import { Routes, Route } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -29,19 +29,14 @@ const DevelopmentRouterWrapper = () => {
 
 function App() {
   useScrollToTop();
-  const homeIntroRef = useRef(null);
-  const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
-
-  const handleHeaderScrolledChange = (scrolled) => {
-    setIsHeaderScrolled(scrolled);
+ 
   };
   return (
     <CartProvider>
     <div className="App"> 
       <Routes>
         {/* '/' 경로는 MainLayout으로 감싸고 Home 컴포넌트를 자식으로 전달 */}
-        <Route path='/' element={<MainLayout scrollToRef={homeIntroRef}
-                onScrolledChange={handleHeaderScrolledChange}><Home scrollRef={homeIntroRef} isDimmed={isHeaderScrolled} /></MainLayout>} />
+        <Route path='/' element={<MainLayout><Home /></MainLayout>} />
         <Route path='/about' element={<MainLayout><About /></MainLayout>} />
         <Route path='/business' element={<MainLayout><Business /></MainLayout>} />
 
