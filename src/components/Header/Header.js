@@ -1,12 +1,12 @@
 import React from 'react';
 import './Header.scss';
 import { Link, NavLink } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { IoMenu , IoClose} from "react-icons/io5";
 
 const Header = ({scrollToRef, onScrolledChange}) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollTriggered, setscrollTriggered] = useState(false);
+  const scrollTriggeredRef = useRef(false);
   const [isSubSectionOpen, setIsSubSectionOpen] = useState(false);
   // 새로운 상태 추가: 오버레이 관리
   const [isOverlayActive, setIsOverlayActive] = useState(false);
