@@ -35,6 +35,7 @@ const MainLayout = ({ children }) => {
         */}
         {
           React.Children.map(children, child => {
+             console.log('child.type.name:', child?.type?.name);
             // child가 유효한 React 엘리먼트이고, 우리가 props를 추가하고 싶은 'Home' 컴포넌트인지 확인합니다.
             // 주의: `child.type.name`으로 컴포넌트 이름을 비교하는 것은
             // 빌드 시 코드가 난독화될 경우 동작하지 않을 수 있습니다.
@@ -42,6 +43,7 @@ const MainLayout = ({ children }) => {
             // HomePage가 특정 prop (예: `isMainPage`)을 받을 때만 로직을 실행하도록 하는 것입니다.
             // 하지만 현재는 이해를 돕기 위해 .name을 사용합니다.
             if (React.isValidElement(child) && child.type.name === 'Home') {
+                 console.log('passing scrollRef to Home:', homeIntroRef.current);
               return cloneElement(child, {
                 scrollRef: homeIntroRef,    // HomePage의 `home-intro` div에 연결될 Ref입니다.
                 isDimmed: isHeaderScrolled  // HomePage의 `home-main` div에 `dimmed` 클래스를 적용할 상태입니다.
