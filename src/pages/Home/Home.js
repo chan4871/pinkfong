@@ -5,7 +5,8 @@ import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import useCountUp from '../../hooks/useCountup';
 
 const Home = ({ scrollRef, isDimmed }) => {
-  
+   console.log('Home received scrollRef:', scrollRef);
+  console.log('Home scrollRef.current:', scrollRef?.current);
   // fade 효과 훅들
   const fadeIntroText = useScrollFadeIn();
   const fadeIntroSub = useScrollFadeIn();
