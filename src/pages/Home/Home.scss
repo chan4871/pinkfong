@@ -20,7 +20,6 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
-    border: 1px solid #000;
     transition: opacity .5s ease;
 
     img {
@@ -89,7 +88,7 @@ main {
 .home-platform {
     position: relative;
     z-index: -1;
-    height: 100vh;
+    height: 150vh;
 
     .bubble {
         width: 1000px;
@@ -131,6 +130,7 @@ main {
         left: 50%;
         transform: translateX(-50%);
         max-width: 1280px;
+        width : 100%;
 
         h2 {
             font-size: 60px;
@@ -242,7 +242,7 @@ main {
 
     .platform-content-img {
         position: absolute;
-        bottom: -200px;
+        bottom: -100px;
         width: 80%;
         left: 50%;
         transform: translateX(-50%);
