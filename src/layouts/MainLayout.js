@@ -41,7 +41,7 @@ const MainLayout = ({ children }) => {
             // 더 견고한 방법은 Context API를 사용하거나,
             // HomePage가 특정 prop (예: `isMainPage`)을 받을 때만 로직을 실행하도록 하는 것입니다.
             // 하지만 현재는 이해를 돕기 위해 .name을 사용합니다.
-            if (React.isValidElement(child)) {
+            if (React.isValidElement(child) && child.type.name === 'Home'){
               return cloneElement(child, {
                 scrollRef: homeIntroRef,    // HomePage의 `home-intro` div에 연결될 Ref입니다.
                 isDimmed: isHeaderScrolled  // HomePage의 `home-main` div에 `dimmed` 클래스를 적용할 상태입니다.
