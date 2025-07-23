@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './App.css'; // 전역 CSS 또는 SCSS 파일
 import { Routes, Route } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
