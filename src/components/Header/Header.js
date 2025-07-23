@@ -15,24 +15,18 @@ const Header = ({scrollToRef, onScrolledChange}) => {
     const onScroll = () =>{
       const y = window.scrollY;
 
-      if(y > 10){
-        if (!scrollTriggered && scrollToRef && scrollToRef.current){
-          setscrollTriggered(true);
-          scrollToRef.current.scrollIntoView({behavior:"smooth", block: "start"});
-          
-        }
-        setIsScrolled(true);
-        if (onScrolledChange) {
-          onScrolledChange(true);
-        }
-      } else {
-        setIsScrolled(false);
-        setscrollTriggered(false);
-        if (onScrolledChange) {
-          onScrolledChange(false);
-        }
-      }
-    };
+      if (y > 10) {
+  if (!scrollTriggered && scrollToRef?.current) {
+    setScrollTriggered(true);
+    scrollToRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  setIsScrolled(true);
+  onScrolledChange && onScrolledChange(true);
+} else {
+  setIsScrolled(false);
+  setScrollTriggered(false);
+  onScrolledChange && onScrolledChange(false);
+}
 
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener("scroll", onScroll);
