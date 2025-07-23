@@ -14,7 +14,7 @@ const Header = ({scrollToRef, onScrolledChange}) => {
  useEffect(() => {
   const onScroll = () => {
     const y = window.scrollY;
-    console.log("scrollToRef.current:", scrollToRef?.current, "scrollY:", y);
+    console.log("Header scrollToRef.current:", scrollToRef?.current, "scrollY:", y);
 
     if (y > 10) {
       if (!scrollTriggeredRef.current && scrollToRef?.current) {
