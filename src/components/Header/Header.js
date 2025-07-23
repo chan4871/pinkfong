@@ -17,8 +17,9 @@ const Header = ({scrollToRef, onScrolledChange}) => {
 
       if(y > 10){
         if (!scrollTriggered && scrollToRef && scrollToRef.current){
-          scrollToRef.current.scrollIntoView({behavior:"smooth", block: "start"});
           setscrollTriggered(true);
+          scrollToRef.current.scrollIntoView({behavior:"smooth", block: "start"});
+          
         }
         setIsScrolled(true);
         if (onScrolledChange) {
