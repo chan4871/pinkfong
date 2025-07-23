@@ -11,28 +11,28 @@ const Header = ({scrollToRef, onScrolledChange}) => {
   // 새로운 상태 추가: 오버레이 관리
   const [isOverlayActive, setIsOverlayActive] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
+ useEffect(() => {
+  const onScroll = () => {
+    const y = window.scrollY;
+    console.log("scrollToRef.current:", scrollToRef?.current, "scrollY:", y);
 
-      if (y > 10) {
-        if (!scrollTriggeredRef.current && scrollToRef?.current) {
-          scrollTriggeredRef.current = true;  // useRef로 상태 변경
-          scrollToRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        setIsScrolled(true);
-        if (onScrolledChange) onScrolledChange(true);
-      } else {
-        setIsScrolled(false);
-        scrollTriggeredRef.current = false;  // useRef 초기화
-        if (onScrolledChange) onScrolledChange(false);
+    if (y > 10) {
+      if (!scrollTriggeredRef.current && scrollToRef?.current) {
+        scrollTriggeredRef.current = true;
+        scrollToRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    };
+      setIsScrolled(true);
+      if (onScrolledChange) onScrolledChange(true);
+    } else {
+      setIsScrolled(false);
+      scrollTriggeredRef.current = false;
+      if (onScrolledChange) onScrolledChange(false);
+    }
+  };
 
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [scrollToRef, onScrolledChange]);
-
+  window.addEventListener('scroll', onScroll);
+  return () => window.removeEventListener('scroll', onScroll);
+}, [scrollToRef, onScrolledChange]);
   // 서브메뉴 및 오버레이 열기
   const openSubSection = () => {
     setIsSubSectionOpen(true);
