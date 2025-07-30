@@ -30,7 +30,7 @@ const DevelopmentRouterWrapper = () => {
 function App() {
   useScrollToTop();
  
-  };
+  
   return (
     <CartProvider>
     <div className="App"> 
