@@ -25,7 +25,7 @@ const RecommendCategoryList = () => {
     <div className="recommend-category-list">
         
         {categories.map(cat => (
-          <Link to={`/development/${cat.id}}`} key={cat.id} className="category-card" >
+          <Link to='/comingsoon' key={cat.id} className="category-card" >
             <img src={cat.image} alt="{cat.name}"/>
             <p>{cat.name}</p>
           </Link>
